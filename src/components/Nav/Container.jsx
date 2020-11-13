@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 const NavContainer = styled.div`
   height: 45px;
-  top: 0;
 
   border-bottom: 1px solid rgba(0,0,0,0.175);
   box-shadow: 0 0 5px 2px rgba(0,0,0,0.15);
