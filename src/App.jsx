@@ -1,39 +1,33 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-function App() {
-  // Create the count state.
-  const [count, setCount] = useState(0);
-  // Create the counter (+1 every second).
-  useEffect(() => {
-    const timer = setTimeout(() => setCount(count + 1), 1000);
-    return () => clearTimeout(timer);
-  }, [count, setCount]);
-  // Return the App component.
+import * as Nav from './components/Nav'
+import Container from './components/Container'
+import Segment from './components/Segment'
+
+import 'normalize.css'
+import './styles/fontOverrides.css'
+import './styles/linkStyleOverrides.css'
+
+const App = props => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.jsx</code> and save to reload.
-        </p>
-        <p>
-          Page has been open for <code>{count}</code> seconds.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
-    </div>
-  );
+    <>
+      <Nav.Container>
+        <Container>
+          <Nav.Branding href='/'>
+            Seia-Soto
+          </Nav.Branding>
+          <Nav.Item href='https://github.com/Seia-Soto' target='_blank'>GitHub</Nav.Item>
+          <Nav.Item href='https://twitter.com/Seia_Soto' target='_blank'>Twitter</Nav.Item>
+        </Container>
+      </Nav.Container>
+      <Container>
+        <Segment>
+          Some content!
+        </Segment>
+      </Container>
+    </>
+  )
 }
 
-export default App;
+export default App

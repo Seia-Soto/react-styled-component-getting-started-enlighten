@@ -1,4 +1,6 @@
-# New Project
+# React styled-component getting started
+
+The main purpose of this repository is learning the use of NPM (I've used yarn only really long time) and styled-component library.
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
