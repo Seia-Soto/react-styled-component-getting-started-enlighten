@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-const Segment = styled.div`
-  padding: 14px 10px;
+const MainHeroActionGroup = styled.h1`
+  padding-top: 5px;
 `
 
-export default Segment
+export default MainHeroActionGroup
